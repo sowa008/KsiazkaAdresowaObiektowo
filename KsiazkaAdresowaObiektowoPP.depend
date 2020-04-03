@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1585947407 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
+	"KsiazkaAdresowa.h"
+
+1585946380 source:c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownik.cpp
+	"Uzytkownik.h"
+
+1585947092 source:c:\praca\programy\ksiazkaadresowaobiektowopp\main.cpp
+	<iostream>
+	"KsiazkaAdresowa.h"
+
+1585947475 c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.h
+	<iostream>
+	<vector>
+	"Uzytkownik.h"
+	<windows.h>
+
+1585945880 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownik.h
+	<iostream>
+
