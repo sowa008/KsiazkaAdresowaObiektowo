@@ -66,3 +66,8 @@ for (int i=0; i<uzytkownicy.size(); i++)
         cout << uzytkownicy[i].pobierzHaslo() << endl;
     }
 }
+
+void UzytkownikManager :: wczytajUzytkownikowZPliku()
+{
+    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+}
