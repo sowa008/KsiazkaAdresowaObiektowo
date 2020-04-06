@@ -1,23 +1,23 @@
 # depslib dependency file v1.0
-1586023475 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
+1586197557 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 	"UzytkownikManager.h"
 
 1585950342 source:c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1585950342 source:c:\praca\programy\ksiazkaadresowaobiektowopp\main.cpp
+1586197665 source:c:\praca\programy\ksiazkaadresowaobiektowopp\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 
-1586024733 c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.h
+1586196086 c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikManager.h"
 
-1586023005 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownik.h
+1586025430 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownik.h
 	<iostream>
 
-1586024217 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.h
+1586196051 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -26,27 +26,28 @@
 	"Uzytkownik.h"
 	"PlikZUzytkownikami.h"
 
-1586024527 c:\praca\programy\ksiazkaadresowaobiektowopp\plikzuzytkownikami.h
+1586198662 c:\praca\programy\ksiazkaadresowaobiektowopp\plikzuzytkownikami.h
 	<iostream>
 	<vector>
 	<fstream>
+	<cstdlib>
 	"Uzytkownik.h"
 	"MetodyPomocnicze.h"
 
-1586023249 c:\praca\programy\ksiazkaadresowaobiektowopp\metodypomocnicze.h
+1586025430 c:\praca\programy\ksiazkaadresowaobiektowopp\metodypomocnicze.h
 	<iostream>
 	<sstream>
 	<vector>
 	"Uzytkownik.h"
 
-1586024239 source:c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.cpp
+1586196042 source:c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.cpp
 	"UzytkownikManager.h"
 
-1586023491 source:c:\praca\programy\ksiazkaadresowaobiektowopp\metodypomocnicze.cpp
+1586025430 source:c:\praca\programy\ksiazkaadresowaobiektowopp\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 	"UzytkownikManager.h"
 
-1586024496 source:c:\praca\programy\ksiazkaadresowaobiektowopp\plikzuzytkownikami.cpp
+1586197470 source:c:\praca\programy\ksiazkaadresowaobiektowopp\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 	"UzytkownikManager.h"
 	<iostream>
