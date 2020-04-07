@@ -2,11 +2,6 @@
 #include "UzytkownikManager.h"
 #include <iostream>
 
-PlikZUzytkownikami :: PlikZUzytkownikami ()
-{
-    nazwaPlikuZUzytkownikami="Uzytkownicy.txt";
-}
-
 void PlikZUzytkownikami :: dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
     fstream plikTekstowy;

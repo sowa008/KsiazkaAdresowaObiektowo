@@ -1,23 +1,23 @@
 # depslib dependency file v1.0
-1586200163 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
+1586295980 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 	"UzytkownikManager.h"
 
 1585950342 source:c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1586200163 source:c:\praca\programy\ksiazkaadresowaobiektowopp\main.cpp
+1586296572 source:c:\praca\programy\ksiazkaadresowaobiektowopp\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 
-1586200163 c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.h
+1586296232 c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikManager.h"
 
 1586025430 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownik.h
 	<iostream>
 
-1586200163 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.h
+1586295741 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -26,7 +26,7 @@
 	"Uzytkownik.h"
 	"PlikZUzytkownikami.h"
 
-1586293050 c:\praca\programy\ksiazkaadresowaobiektowopp\plikzuzytkownikami.h
+1586295866 c:\praca\programy\ksiazkaadresowaobiektowopp\plikzuzytkownikami.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -47,7 +47,7 @@
 	"MetodyPomocnicze.h"
 	"UzytkownikManager.h"
 
-1586293070 source:c:\praca\programy\ksiazkaadresowaobiektowopp\plikzuzytkownikami.cpp
+1586294714 source:c:\praca\programy\ksiazkaadresowaobiektowopp\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 	"UzytkownikManager.h"
 	<iostream>
