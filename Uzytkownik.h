@@ -7,6 +7,8 @@ using namespace std;
 
 class Uzytkownik
 {
+    friend class UzytkownikManager;
+
     int id;
     string login;
     string haslo;

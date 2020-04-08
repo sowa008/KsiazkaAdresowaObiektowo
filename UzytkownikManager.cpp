@@ -19,18 +19,19 @@ Uzytkownik UzytkownikManager :: podajDaneNowegoUzytkownika()
     uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
 
     string login, haslo;
+    MetodyPomocnicze metodaPomocnicza;
 
     do
     {
         cout << "Podaj login: ";
-        //uzytkownik.login = wczytajLinie();
+        //uzytkownik.login = metodaPomocnicza.wczytajLinie();
         cin >> login;
         uzytkownik.ustawLogin(login);
     }
     while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
 
     cout << "Podaj haslo: ";
-    //uzytkownik.haslo = wczytajLinie();
+    //uzytkownik.haslo = metodaPomocnicza.wczytajLinie();
     cin >> haslo;
     uzytkownik.ustawHaslo(haslo);
 
@@ -70,4 +71,42 @@ for (int i=0; i<uzytkownicy.size(); i++)
 void UzytkownikManager :: wczytajUzytkownikowZPliku()
 {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+}
+
+int UzytkownikManager :: logowanieUzytkownika()
+{
+    Uzytkownik uzytkownik;
+    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+    MetodyPomocnicze metodaPomocnicza;
+    string login = "", haslo = "";
+
+    cout << endl << "Podaj login: ";
+    login = metodaPomocnicza.wczytajLinie();
+
+    vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
+    while (itr != uzytkownicy.end())
+    {
+        if (itr -> login == login)
+        {
+            for (int iloscProb = 3; iloscProb > 0; iloscProb--)
+            {
+                cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
+                haslo = metodaPomocnicza.wczytajLinie();
+
+                if (itr -> haslo == haslo)
+                {
+                    cout << endl << "Zalogowales sie." << endl << endl;
+                    system("pause");
+                    return itr -> id;
+                }
+            }
+            cout << "Wprowadzono 3 razy bledne haslo." << endl;
+            system("pause");
+            return 0;
+        }
+        itr++;
+    }
+    cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
+    system("pause");
+    return 0;
 }

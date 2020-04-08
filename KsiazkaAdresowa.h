@@ -9,6 +9,7 @@ using namespace std;
 class KsiazkaAdresowa
 {
     UzytkownikManager uzytkownikManager;
+    MetodyPomocnicze metodaPomocnicza;
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikManager(nazwaPlikuZUzytkownikami){
@@ -16,6 +17,9 @@ public:
     };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
+    char wybierzOpcjeZMenuGlownego();
+    int logowanieUzytkownika();
+
 };
 
 #endif
