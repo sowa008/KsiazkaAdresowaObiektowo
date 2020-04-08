@@ -19,6 +19,7 @@ public:
     void wypiszWszystkichUzytkownikow();
     char wybierzOpcjeZMenuGlownego();
     int logowanieUzytkownika();
+    char wybierzOpcjeZMenuUzytkownika();
 
 };
 

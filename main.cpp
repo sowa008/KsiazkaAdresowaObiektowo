@@ -34,20 +34,21 @@ int main()
                 break;
             }
         }
-      /*  else
+        else
         {
-
-            if (adresaci.empty() == true)
+char wybor;
+            //if (adresaci.empty() == true)
+                if (true)
                 // Pobieramy idOstatniegoAdresata, po to aby zoptymalizowac program.
                 // Dzieki temu, kiedy uztykwonik bedzie dodawal nowego adresata
                 // to nie bedziemy musieli jeszcze raz ustalac idOstatniegoAdresata
-                idOstatniegoAdresata = wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
+                //idOstatniegoAdresata = wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
 
-            wybor = wybierzOpcjeZMenuUzytkownika();
+           wybor = ksiazkaAdresowa.wybierzOpcjeZMenuUzytkownika();
 
             switch (wybor)
             {
-            case '1':
+           /* case '1':
                 idOstatniegoAdresata = dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);
                 break;
             case '2':
@@ -65,24 +66,17 @@ int main()
                 break;
             case '6':
                 edytujAdresata(adresaci);
-                break;
+                break; */
             case '7':
-                zmianaHaslaZalogowanegoUzytkownika(uzytkownicy, idZalogowanegoUzytkownika);
+//                zmianaHaslaZalogowanegoUzytkownika(uzytkownicy, idZalogowanegoUzytkownika);
                 break;
             case '8':
                 idZalogowanegoUzytkownika = 0;
-                adresaci.clear();
+              //  adresaci.clear();
                 break;
             }
         }
-   */ }
-
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-
-
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    }
 
     return 0;
 }

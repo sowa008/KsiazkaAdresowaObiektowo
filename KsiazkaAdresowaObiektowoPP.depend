@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1586376760 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
+1586378056 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 	"UzytkownikManager.h"
 
@@ -10,7 +10,7 @@
 	<iostream>
 	"KsiazkaAdresowa.h"
 
-1586376695 c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.h
+1586377652 c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikManager.h"
 
