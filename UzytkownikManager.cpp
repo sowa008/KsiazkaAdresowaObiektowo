@@ -1,4 +1,5 @@
 #include "UzytkownikManager.h"
+#include "PlikZUzytkownikami.h"
 
 void UzytkownikManager :: rejestracjaUzytkownika()
 {
@@ -19,7 +20,7 @@ Uzytkownik UzytkownikManager :: podajDaneNowegoUzytkownika()
     uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
 
     string login, haslo;
-    MetodyPomocnicze metodaPomocnicza;
+   // MetodyPomocnicze metodaPomocnicza;
 
     do
     {
@@ -95,10 +96,12 @@ int UzytkownikManager :: logowanieUzytkownika()
 
                 if (itr -> haslo == haslo)
                 {
+                    idZalogowanegoUzytkownika = itr -> id;
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     return itr -> id;
                 }
+
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
@@ -109,4 +112,29 @@ int UzytkownikManager :: logowanieUzytkownika()
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
     return 0;
+}
+
+void UzytkownikManager :: zmianaHaslaZalogowanegoUzytkownika()
+{
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    MetodyPomocnicze metodaPomocnicza;
+   // PlikZUzytkownikami plikZUzytkownikami(nazwaPlikuZUzytkownikami);
+    noweHaslo = metodaPomocnicza.wczytajLinie();
+   // Uzytkownik uzytkownicy;
+    vector <Uzytkownik> uzytkownicy=plikZUzytkownikami.wczytajUzytkownikowZPliku();
+
+    //cout << "Id zalogowanego uzytkownika: " << idZalogowanegoUzytkownika << endl;
+
+    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+    {
+        //cout << itr -> id << " " << itr -> haslo << endl;
+        if (itr -> id == idZalogowanegoUzytkownika)
+        {
+            itr -> haslo = noweHaslo;
+            cout << "Haslo zostalo zmienione." <<endl << endl;
+           // system("pause");
+        }
+    } system("pause");
+    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }

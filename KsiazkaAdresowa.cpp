@@ -16,6 +16,11 @@ void KsiazkaAdresowa :: wypiszWszystkichUzytkownikow()
     uzytkownikManager.wypiszWszystkichUzytkownikow();
 }
 
+void KsiazkaAdresowa :: zmianaHaslaZalogowanegoUzytkownika()
+{
+    uzytkownikManager.zmianaHaslaZalogowanegoUzytkownika();
+}
+
 char KsiazkaAdresowa :: wybierzOpcjeZMenuGlownego()
 {
     char wybor;

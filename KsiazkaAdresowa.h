@@ -20,6 +20,8 @@ public:
     char wybierzOpcjeZMenuGlownego();
     int logowanieUzytkownika();
     char wybierzOpcjeZMenuUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
+
 
 };
 

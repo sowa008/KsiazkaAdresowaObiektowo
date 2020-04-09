@@ -1,5 +1,6 @@
 #include <iostream>
 #include "KsiazkaAdresowa.h"
+#include "UzytkownikManager.h"
 
 using namespace std;
 
@@ -10,6 +11,7 @@ int main()
     int idUsunietegoAdresata = 0;
 
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
+    //UzytkownikManager uzytkownikManager("Uzytkownicy.txt");
 
     while (true)
     {
@@ -68,7 +70,9 @@ char wybor;
                 edytujAdresata(adresaci);
                 break; */
             case '7':
-//                zmianaHaslaZalogowanegoUzytkownika(uzytkownicy, idZalogowanegoUzytkownika);
+            ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+
+                //zmianaHaslaZalogowanegoUzytkownika(uzytkownicy, idZalogowanegoUzytkownika);
                 break;
             case '8':
                 idZalogowanegoUzytkownika = 0;

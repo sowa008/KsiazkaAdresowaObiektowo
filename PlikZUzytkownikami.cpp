@@ -1,6 +1,7 @@
 #include "PlikZUzytkownikami.h"
 #include "UzytkownikManager.h"
 #include <iostream>
+#include <vector>
 
 void PlikZUzytkownikami :: dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
@@ -99,4 +100,37 @@ Uzytkownik PlikZUzytkownikami :: pobierzDaneUzytkownika(string daneJednegoUzytko
         }
     }
     return uzytkownik;
+}
+
+void PlikZUzytkownikami :: zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy)
+{
+    fstream plikTekstowy;
+    string liniaZDanymiUzytkownika = "";
+    //vector <Uzytkownik> uzytkownicy;
+    vector <Uzytkownik>::iterator itrKoniec = --uzytkownicy.end();
+
+    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::out);
+
+    if (plikTekstowy.good() == true)
+    {
+        for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+        {
+            liniaZDanymiUzytkownika = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(*itr);
+
+            if (itr == itrKoniec)
+            {
+               plikTekstowy << liniaZDanymiUzytkownika;
+            }
+            else
+            {
+                plikTekstowy << liniaZDanymiUzytkownika << endl;
+            }
+            liniaZDanymiUzytkownika = "";
+        }
+    }
+    else
+    {
+        cout << "Nie mozna otworzyc pliku " << nazwaPlikuZUzytkownikami << endl;
+    }
+    plikTekstowy.close();
 }
