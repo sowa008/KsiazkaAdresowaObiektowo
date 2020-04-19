@@ -31,6 +31,8 @@ public:
     }
 
     void dodajAdresata();
+    void wyswietlDaneAdresata(Adresat adresat);
+    void wyswietlWszystkichAdresatowZalogowanegoUzytkownika();
 };
 
 #endif

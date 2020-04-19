@@ -41,6 +41,11 @@ void KsiazkaAdresowa :: zmianaHaslaZalogowanegoUzytkownika()
     uzytkownikManager.zmianaHaslaZalogowanegoUzytkownika();
 }
 
+void KsiazkaAdresowa :: wyswietlWszystkichAdresatowZalogowanegoUzytkownika()
+{
+    adresatManager->wyswietlWszystkichAdresatowZalogowanegoUzytkownika();
+}
+
 char KsiazkaAdresowa :: wybierzOpcjeZMenuGlownego()
 {
     char wybor;

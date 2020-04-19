@@ -1,4 +1,5 @@
 #include "AdresatManager.h"
+#include "Adresat.h"
 #include "PlikZAdresatami.h"
 #include "MetodyPomocnicze.h"
 
@@ -49,6 +50,36 @@ void AdresatManager :: dodajAdresata()
     else
     {
         cout << "Blad. Nie udalo sie dodac nowego adresata do pliku." << endl;
+    }
+    system("pause");
+}
+
+void AdresatManager :: wyswietlDaneAdresata(Adresat adresat)
+{
+    cout << endl << "Id:                 " << adresat.idAdresata << endl;
+    cout << "Imie:               " << adresat.imie << endl;
+    cout << "Nazwisko:           " << adresat.nazwisko << endl;
+    cout << "Numer telefonu:     " << adresat.numerTelefonu << endl;
+    cout << "Email:              " << adresat.email << endl;
+    cout << "Adres:              " << adresat.adres << endl;
+}
+
+void AdresatManager :: wyswietlWszystkichAdresatowZalogowanegoUzytkownika()
+{
+    system("cls");
+    if (!adresaci.empty())
+    {
+        cout << "             >>> ADRESACI <<<" << endl;
+        cout << "-----------------------------------------------" << endl;
+        for (vector <Adresat> :: iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+        {
+            wyswietlDaneAdresata(*itr);
+        }
+        cout << endl;
+    }
+    else
+    {
+        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
     }
     system("pause");
 }

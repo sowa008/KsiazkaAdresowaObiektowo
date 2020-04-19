@@ -56,10 +56,10 @@ int main()
               case '3':
                   wyszukajAdresatowPoNazwisku(adresaci);
                   break;
-              case '4':
-                  wyswietlWszystkichAdresatow(adresaci);
+            */  case '4':
+                  ksiazkaAdresowa.wyswietlWszystkichAdresatowZalogowanegoUzytkownika();
                   break;
-              case '5':
+            /*  case '5':
                   idUsunietegoAdresata = usunAdresata(adresaci);
                   idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
                   break;

@@ -36,6 +36,8 @@ public:
     void wylogowanieUzytkownika();
     char wybierzOpcjeZMenuUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
+    void wyswietlWszystkichAdresatowZalogowanegoUzytkownika();
+
 };
 
 #endif
