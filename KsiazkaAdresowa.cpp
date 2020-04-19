@@ -4,7 +4,7 @@
 
 void KsiazkaAdresowa :: dodajAdresata()
 {
-    adresatManager.dodajAdresata();
+    adresatManager->dodajAdresata();
 }
 
 void KsiazkaAdresowa :: rejestracjaUzytkownika()
@@ -12,9 +12,18 @@ void KsiazkaAdresowa :: rejestracjaUzytkownika()
     uzytkownikManager.rejestracjaUzytkownika();
 }
 
-int KsiazkaAdresowa :: logowanieUzytkownika()
+void KsiazkaAdresowa :: logowanieUzytkownika()
 {
-    return uzytkownikManager.logowanieUzytkownika();
+    uzytkownikManager.logowanieUzytkownika();
+    if (uzytkownikManager.czyUzytkownikJestZalogowany())
+    {
+        adresatManager = new AdresatManager(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikManager.pobierzIdZalogowanegoUzytkownika());
+    }
+}
+
+int KsiazkaAdresowa :: pobierzIdZalogowanegoUzytkownika()
+{
+    return uzytkownikManager.pobierzIdZalogowanegoUzytkownika();
 }
 
 void KsiazkaAdresowa :: wypiszWszystkichUzytkownikow()

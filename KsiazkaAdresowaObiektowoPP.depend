@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1587304200 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
+1587321899 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 	"UzytkownikManager.h"
 	"AdresatManager.h"
@@ -7,7 +7,7 @@
 1587060693 source:c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1587304882 source:c:\praca\programy\ksiazkaadresowaobiektowopp\main.cpp
+1587321933 source:c:\praca\programy\ksiazkaadresowaobiektowopp\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 	"UzytkownikManager.h"
@@ -15,7 +15,7 @@
 	"Uzytkownik.h"
 	"Adresat.h"
 
-1587304766 c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.h
+1587321899 c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikManager.h"
 	"AdresatManager.h"
@@ -24,7 +24,7 @@
 	<iostream>
 	<vector>
 
-1587231179 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.h
+1587319600 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -47,7 +47,7 @@
 	<vector>
 	"Uzytkownik.h"
 
-1587231179 source:c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.cpp
+1587321038 source:c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.cpp
 	"UzytkownikManager.h"
 	"PlikZUzytkownikami.h"
 
@@ -64,7 +64,7 @@
 1587305050 source:c:\praca\programy\ksiazkaadresowaobiektowopp\adresat.cpp
 	"Adresat.h"
 
-1587304174 source:c:\praca\programy\ksiazkaadresowaobiektowopp\adresatmanager.cpp
+1587318941 source:c:\praca\programy\ksiazkaadresowaobiektowopp\adresatmanager.cpp
 	"AdresatManager.h"
 	"PlikZAdresatami.h"
 	"MetodyPomocnicze.h"
@@ -92,7 +92,7 @@
 	<iostream>
 	<vector>
 
-1587303546 c:\praca\programy\ksiazkaadresowaobiektowopp\plikzadresatami.h
+1587318624 c:\praca\programy\ksiazkaadresowaobiektowopp\plikzadresatami.h
 	<iostream>
 	<vector>
 	<fstream>

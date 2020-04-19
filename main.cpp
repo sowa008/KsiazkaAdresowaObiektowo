@@ -13,7 +13,6 @@ int main()
     int idOstatniegoAdresata = 0;
 
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
-    //UzytkownikManager uzytkownikManager("Uzytkownicy.txt");
 
     while (true)
     {
@@ -24,10 +23,11 @@ int main()
             switch (wybor)
             {
             case '1':
-                 ksiazkaAdresowa.rejestracjaUzytkownika();
+                ksiazkaAdresowa.rejestracjaUzytkownika();
                 break;
             case '2':
-                idZalogowanegoUzytkownika = ksiazkaAdresowa.logowanieUzytkownika();
+                ksiazkaAdresowa.logowanieUzytkownika();
+                idZalogowanegoUzytkownika=ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika();
                 break;
             case '9':
                 exit(0);

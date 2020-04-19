@@ -69,49 +69,43 @@ for (int i=0; i<uzytkownicy.size(); i++)
     }
 }
 
-void UzytkownikManager :: wczytajUzytkownikowZPliku()
+void UzytkownikManager :: logowanieUzytkownika()
 {
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}
-
-int UzytkownikManager :: logowanieUzytkownika()
-{
-    Uzytkownik uzytkownik;
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-    MetodyPomocnicze metodaPomocnicza;
+   // Uzytkownik uzytkownik;
+   // uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+   // MetodyPomocnicze metodaPomocnicza;
     string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";
-    login = metodaPomocnicza.wczytajLinie();
+    login = MetodyPomocnicze :: wczytajLinie();
 
     vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
     while (itr != uzytkownicy.end())
     {
-        if (itr -> login == login)
+        if (itr -> pobierzLogin() == login)
         {
             for (int iloscProb = 3; iloscProb > 0; iloscProb--)
             {
                 cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
-                haslo = metodaPomocnicza.wczytajLinie();
+                haslo = MetodyPomocnicze :: wczytajLinie();
 
-                if (itr -> haslo == haslo)
+                if (itr -> pobierzHaslo() == haslo)
                 {
-                    idZalogowanegoUzytkownika = itr -> id;
-                    cout << endl << "Zalogowales sie." << endl << endl;
+                    idZalogowanegoUzytkownika = itr -> pobierzId();
+                    cout << endl << "Zalogowales sie. Twoj numer id wynosi " <<  idZalogowanegoUzytkownika << endl << endl;
                     system("pause");
-                    return itr -> id;
+                    return;
                 }
-
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-            return 0;
+            return;
         }
         itr++;
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    return 0;
+    return;
 }
 
 void UzytkownikManager :: zmianaHaslaZalogowanegoUzytkownika()
@@ -137,4 +131,18 @@ void UzytkownikManager :: zmianaHaslaZalogowanegoUzytkownika()
         }
     } system("pause");
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+}
+
+bool UzytkownikManager :: czyUzytkownikJestZalogowany()
+{
+    if (idZalogowanegoUzytkownika > 0)
+    {
+        return true;
+    }
+    else return false;
+}
+
+int UzytkownikManager :: pobierzIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
 }

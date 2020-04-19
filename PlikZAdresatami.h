@@ -13,7 +13,6 @@ using namespace std;
 
 class PlikZAdresatami
 {
-    //friend class AdresatManager;
     const string NAZWA_PLIKU_Z_ADRESATAMI;
     int idOstatniegoAdresata;
 

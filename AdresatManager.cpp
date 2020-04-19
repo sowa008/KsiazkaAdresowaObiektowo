@@ -7,11 +7,8 @@ Adresat AdresatManager :: podajDaneNowegoAdresata()
     Adresat adresat;
     string imie, nazwisko, numerTelefonu, email, adres;
 
-    // usunalem static z ID_ZALOGOWANEGO_UZYTKOWNIKA
-    // teraz jest const i musi byc ustawiane poprzez konstruktor
     adresat.ustawIdAdresata(plikZAdresatami.pobierzIdOstatniegoAdresata(ID_ZALOGOWANEGO_UZYTKOWNIKA)+1);
     adresat.ustawIdZalogowanegoUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
-
 
     cout << "Podaj imie: ";
     imie = MetodyPomocnicze :: wczytajLinie();
