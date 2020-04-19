@@ -1,5 +1,11 @@
 #include "KsiazkaAdresowa.h"
 #include "UzytkownikManager.h"
+#include "AdresatManager.h"
+
+void KsiazkaAdresowa :: dodajAdresata()
+{
+    adresatManager.dodajAdresata();
+}
 
 void KsiazkaAdresowa :: rejestracjaUzytkownika()
 {

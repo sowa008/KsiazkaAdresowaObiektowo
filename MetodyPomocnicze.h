@@ -12,9 +12,10 @@ class MetodyPomocnicze
 {
 
 public:
-    static string konwerjsaIntNaString(int liczba);
-    char wczytajZnak();
-    string wczytajLinie();
+    static int konwersjaStringNaInt(string tekst);
+    static string konwersjaIntNaString(int liczba);
+    static char wczytajZnak();
+    static string wczytajLinie();
 };
 
 #endif

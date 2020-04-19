@@ -1,7 +1,15 @@
 #include "MetodyPomocnicze.h"
 #include "UzytkownikManager.h"
 
-string MetodyPomocnicze :: konwerjsaIntNaString(int liczba)
+int MetodyPomocnicze :: konwersjaStringNaInt(string tekst)
+{
+    int liczbaInt;
+    istringstream iss(tekst);
+    iss >> liczbaInt;
+    return liczbaInt;
+}
+
+string MetodyPomocnicze :: konwersjaIntNaString(int liczba)
 {
     ostringstream ss;
     ss << liczba;

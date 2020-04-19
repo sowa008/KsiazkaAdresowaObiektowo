@@ -1,6 +1,9 @@
 #include <iostream>
 #include "KsiazkaAdresowa.h"
 #include "UzytkownikManager.h"
+#include "AdresatManager.h"
+#include "Uzytkownik.h"
+#include "Adresat.h"
 
 using namespace std;
 
@@ -8,9 +11,8 @@ int main()
 {
     int idZalogowanegoUzytkownika = 0;
     int idOstatniegoAdresata = 0;
-    int idUsunietegoAdresata = 0;
 
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
     //UzytkownikManager uzytkownikManager("Uzytkownicy.txt");
 
     while (true)
@@ -50,10 +52,10 @@ char wybor;
 
             switch (wybor)
             {
-           /* case '1':
-                idOstatniegoAdresata = dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);
+            case '1':
+                ksiazkaAdresowa.dodajAdresata();
                 break;
-            case '2':
+          /*  case '2':
                 wyszukajAdresatowPoImieniu(adresaci);
                 break;
             case '3':

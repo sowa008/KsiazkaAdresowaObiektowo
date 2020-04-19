@@ -1,25 +1,30 @@
 # depslib dependency file v1.0
-1586423764 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
+1587304200 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 	"UzytkownikManager.h"
+	"AdresatManager.h"
 
-1585950342 source:c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownik.cpp
+1587060693 source:c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1586423633 source:c:\praca\programy\ksiazkaadresowaobiektowopp\main.cpp
+1587304882 source:c:\praca\programy\ksiazkaadresowaobiektowopp\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 	"UzytkownikManager.h"
+	"AdresatManager.h"
+	"Uzytkownik.h"
+	"Adresat.h"
 
-1586423771 c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.h
+1587304766 c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikManager.h"
+	"AdresatManager.h"
 
-1586380772 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownik.h
+1587060053 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownik.h
 	<iostream>
 	<vector>
 
-1586424851 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.h
+1587231179 c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -28,7 +33,7 @@
 	"Uzytkownik.h"
 	"PlikZUzytkownikami.h"
 
-1586424057 c:\praca\programy\ksiazkaadresowaobiektowopp\plikzuzytkownikami.h
+1587304362 c:\praca\programy\ksiazkaadresowaobiektowopp\plikzuzytkownikami.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -36,23 +41,62 @@
 	"Uzytkownik.h"
 	"MetodyPomocnicze.h"
 
-1586375936 c:\praca\programy\ksiazkaadresowaobiektowopp\metodypomocnicze.h
+1587301847 c:\praca\programy\ksiazkaadresowaobiektowopp\metodypomocnicze.h
 	<iostream>
 	<sstream>
 	<vector>
 	"Uzytkownik.h"
 
-1586424968 source:c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.cpp
+1587231179 source:c:\praca\programy\ksiazkaadresowaobiektowopp\uzytkownikmanager.cpp
 	"UzytkownikManager.h"
 	"PlikZUzytkownikami.h"
 
-1586375948 source:c:\praca\programy\ksiazkaadresowaobiektowopp\metodypomocnicze.cpp
+1587247954 source:c:\praca\programy\ksiazkaadresowaobiektowopp\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 	"UzytkownikManager.h"
 
-1586424029 source:c:\praca\programy\ksiazkaadresowaobiektowopp\plikzuzytkownikami.cpp
+1587301909 source:c:\praca\programy\ksiazkaadresowaobiektowopp\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 	"UzytkownikManager.h"
 	<iostream>
 	<vector>
+
+1587305050 source:c:\praca\programy\ksiazkaadresowaobiektowopp\adresat.cpp
+	"Adresat.h"
+
+1587304174 source:c:\praca\programy\ksiazkaadresowaobiektowopp\adresatmanager.cpp
+	"AdresatManager.h"
+	"PlikZAdresatami.h"
+	"MetodyPomocnicze.h"
+
+1587308841 source:c:\praca\programy\ksiazkaadresowaobiektowopp\plikzadresatami.cpp
+	"PlikZAdresatami.h"
+	"AdresatManager.h"
+	"MetodyPomocnicze.h"
+	<iostream>
+	<vector>
+
+1587312294 c:\praca\programy\ksiazkaadresowaobiektowopp\adresatmanager.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"Uzytkownik.h"
+	"PlikZUzytkownikami.h"
+	"Adresat.h"
+	"PlikZAdresatami.h"
+	"UzytkownikManager.h"
+
+1587301935 c:\praca\programy\ksiazkaadresowaobiektowopp\adresat.h
+	<iostream>
+	<vector>
+
+1587303546 c:\praca\programy\ksiazkaadresowaobiektowopp\plikzadresatami.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"Adresat.h"
+	"MetodyPomocnicze.h"
 
