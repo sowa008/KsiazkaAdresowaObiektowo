@@ -33,10 +33,9 @@ public:
     void wypiszWszystkichUzytkownikow();
     char wybierzOpcjeZMenuGlownego();
     void logowanieUzytkownika();
+    void wylogowanieUzytkownika();
     char wybierzOpcjeZMenuUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
-
-
 };
 
 #endif

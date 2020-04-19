@@ -20,19 +20,16 @@ Uzytkownik UzytkownikManager :: podajDaneNowegoUzytkownika()
     uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
 
     string login, haslo;
-   // MetodyPomocnicze metodaPomocnicza;
 
     do
     {
         cout << "Podaj login: ";
-        //uzytkownik.login = metodaPomocnicza.wczytajLinie();
         cin >> login;
         uzytkownik.ustawLogin(login);
     }
     while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
 
     cout << "Podaj haslo: ";
-    //uzytkownik.haslo = metodaPomocnicza.wczytajLinie();
     cin >> haslo;
     uzytkownik.ustawHaslo(haslo);
 
@@ -71,9 +68,6 @@ for (int i=0; i<uzytkownicy.size(); i++)
 
 void UzytkownikManager :: logowanieUzytkownika()
 {
-   // Uzytkownik uzytkownik;
-   // uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-   // MetodyPomocnicze metodaPomocnicza;
     string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";
@@ -113,24 +107,25 @@ void UzytkownikManager :: zmianaHaslaZalogowanegoUzytkownika()
     string noweHaslo = "";
     cout << "Podaj nowe haslo: ";
     MetodyPomocnicze metodaPomocnicza;
-   // PlikZUzytkownikami plikZUzytkownikami(nazwaPlikuZUzytkownikami);
-    noweHaslo = metodaPomocnicza.wczytajLinie();
-   // Uzytkownik uzytkownicy;
-    vector <Uzytkownik> uzytkownicy=plikZUzytkownikami.wczytajUzytkownikowZPliku();
 
-    //cout << "Id zalogowanego uzytkownika: " << idZalogowanegoUzytkownika << endl;
+    noweHaslo = metodaPomocnicza.wczytajLinie();
+
+    vector <Uzytkownik> uzytkownicy=plikZUzytkownikami.wczytajUzytkownikowZPliku();
 
     for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
     {
-        //cout << itr -> id << " " << itr -> haslo << endl;
         if (itr -> id == idZalogowanegoUzytkownika)
         {
             itr -> haslo = noweHaslo;
             cout << "Haslo zostalo zmienione." <<endl << endl;
-           // system("pause");
         }
     } system("pause");
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+}
+
+void UzytkownikManager :: wylogowanieUzytkownika()
+{
+    idZalogowanegoUzytkownika=0;
 }
 
 bool UzytkownikManager :: czyUzytkownikJestZalogowany()

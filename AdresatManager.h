@@ -17,7 +17,6 @@ using namespace std;
 
 class AdresatManager
 {
-    //UzytkownikManager uzytkownikManager;
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;

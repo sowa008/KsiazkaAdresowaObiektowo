@@ -64,7 +64,7 @@ vector <Uzytkownik> PlikZUzytkownikami :: wczytajUzytkownikowZPliku()
             uzytkownik = pobierzDaneUzytkownika(daneJednegoUzytkownikaOddzielonePionowymiKreskami);
             uzytkownicy.push_back(uzytkownik);
         }
-            plikTekstowy.close();
+        plikTekstowy.close();
     }
     return uzytkownicy;
 }
@@ -106,7 +106,6 @@ void PlikZUzytkownikami :: zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkowni
 {
     fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
-    //vector <Uzytkownik> uzytkownicy;
     vector <Uzytkownik>::iterator itrKoniec = --uzytkownicy.end();
 
     plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::out);
@@ -119,7 +118,7 @@ void PlikZUzytkownikami :: zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkowni
 
             if (itr == itrKoniec)
             {
-               plikTekstowy << liniaZDanymiUzytkownika;
+                plikTekstowy << liniaZDanymiUzytkownika;
             }
             else
             {

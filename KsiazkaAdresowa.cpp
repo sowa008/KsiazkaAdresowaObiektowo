@@ -21,6 +21,11 @@ void KsiazkaAdresowa :: logowanieUzytkownika()
     }
 }
 
+void KsiazkaAdresowa :: wylogowanieUzytkownika()
+{
+    uzytkownikManager.wylogowanieUzytkownika();
+}
+
 int KsiazkaAdresowa :: pobierzIdZalogowanegoUzytkownika()
 {
     return uzytkownikManager.pobierzIdZalogowanegoUzytkownika();
@@ -53,7 +58,7 @@ char KsiazkaAdresowa :: wybierzOpcjeZMenuGlownego()
     return wybor;
 }
 
-    char KsiazkaAdresowa :: wybierzOpcjeZMenuUzytkownika()
+char KsiazkaAdresowa :: wybierzOpcjeZMenuUzytkownika()
 {
     char wybor;
     system("cls");

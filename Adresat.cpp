@@ -3,13 +3,13 @@
 void Adresat :: ustawIdAdresata(int idOstatniegoAdresata)
 {
     if (idOstatniegoAdresata >= 0)
-    idAdresata=idOstatniegoAdresata;
+        idAdresata=idOstatniegoAdresata;
 }
 
 void Adresat :: ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
 {
     if (noweIdZalogowanegoUzytkownika >= 0)
-    idZalogowanegoUzytkownika=noweIdZalogowanegoUzytkownika;
+        idZalogowanegoUzytkownika=noweIdZalogowanegoUzytkownika;
 }
 
 void Adresat :: ustawImie(string noweImie)
