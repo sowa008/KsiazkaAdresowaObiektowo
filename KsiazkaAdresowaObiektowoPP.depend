@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1587325875 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
+1587326766 source:c:\praca\programy\ksiazkaadresowaobiektowopp\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 	"UzytkownikManager.h"
 	"AdresatManager.h"
@@ -64,7 +64,7 @@
 1587322807 source:c:\praca\programy\ksiazkaadresowaobiektowopp\adresat.cpp
 	"Adresat.h"
 
-1587325711 source:c:\praca\programy\ksiazkaadresowaobiektowopp\adresatmanager.cpp
+1587326104 source:c:\praca\programy\ksiazkaadresowaobiektowopp\adresatmanager.cpp
 	"AdresatManager.h"
 	"Adresat.h"
 	"PlikZAdresatami.h"

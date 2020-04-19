@@ -24,6 +24,8 @@ void KsiazkaAdresowa :: logowanieUzytkownika()
 void KsiazkaAdresowa :: wylogowanieUzytkownika()
 {
     uzytkownikManager.wylogowanieUzytkownika();
+    delete adresatManager;
+    adresatManager = NULL;
 }
 
 int KsiazkaAdresowa :: pobierzIdZalogowanegoUzytkownika()
