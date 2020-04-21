@@ -37,7 +37,8 @@ public:
     char wybierzOpcjeZMenuUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wyswietlWszystkichAdresatowZalogowanegoUzytkownika();
-
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 };
 
 #endif

@@ -51,7 +51,7 @@
 	"UzytkownikManager.h"
 	"PlikZUzytkownikami.h"
 
-1587480700 source:c:\praca\programy\ksiazkaadresowaobiektowopp\metodypomocnicze.cpp
+1587480760 source:c:\praca\programy\ksiazkaadresowaobiektowopp\metodypomocnicze.cpp
 	"MetodyPomocnicze.h"
 	"UzytkownikManager.h"
 
@@ -64,7 +64,7 @@
 1587322807 source:c:\praca\programy\ksiazkaadresowaobiektowopp\adresat.cpp
 	"Adresat.h"
 
-1587326104 source:c:\praca\programy\ksiazkaadresowaobiektowopp\adresatmanager.cpp
+1587481665 source:c:\praca\programy\ksiazkaadresowaobiektowopp\adresatmanager.cpp
 	"AdresatManager.h"
 	"Adresat.h"
 	"PlikZAdresatami.h"
@@ -77,7 +77,7 @@
 	<iostream>
 	<vector>
 
-1587326104 c:\praca\programy\ksiazkaadresowaobiektowopp\adresatmanager.h
+1587482081 c:\praca\programy\ksiazkaadresowaobiektowopp\adresatmanager.h
 	<iostream>
 	<vector>
 	<windows.h>

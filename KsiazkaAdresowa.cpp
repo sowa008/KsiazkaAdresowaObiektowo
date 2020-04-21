@@ -48,6 +48,16 @@ void KsiazkaAdresowa :: wyswietlWszystkichAdresatowZalogowanegoUzytkownika()
     adresatManager->wyswietlWszystkichAdresatowZalogowanegoUzytkownika();
 }
 
+void KsiazkaAdresowa :: wyszukajAdresatowPoImieniu()
+{
+    adresatManager->wyszukajAdresatowPoImieniu();
+}
+
+void KsiazkaAdresowa :: wyszukajAdresatowPoNazwisku()
+{
+    adresatManager->wyszukajAdresatowPoNazwisku();
+}
+
 char KsiazkaAdresowa :: wybierzOpcjeZMenuGlownego()
 {
     char wybor;

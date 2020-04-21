@@ -50,13 +50,13 @@ int main()
             case '1':
                 ksiazkaAdresowa.dodajAdresata();
                 break;
-            /*  case '2':
-                  wyszukajAdresatowPoImieniu(adresaci);
+              case '2':
+                  ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                   break;
               case '3':
-                  wyszukajAdresatowPoNazwisku(adresaci);
+                  ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                   break;
-            */  case '4':
+              case '4':
                   ksiazkaAdresowa.wyswietlWszystkichAdresatowZalogowanegoUzytkownika();
                   break;
             /*  case '5':

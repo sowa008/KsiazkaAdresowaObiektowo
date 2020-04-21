@@ -33,6 +33,10 @@ public:
     void dodajAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
     void wyswietlWszystkichAdresatowZalogowanegoUzytkownika();
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+
 };
 
 #endif
