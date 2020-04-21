@@ -12,6 +12,7 @@ class MetodyPomocnicze
 {
 
 public:
+    static bool czyPlikJestPusty(fstream &plikTekstowy);
     static int konwersjaStringNaInt(string tekst);
     static string konwersjaIntNaString(int liczba);
     static char wczytajZnak();
