@@ -1,4 +1,7 @@
 KsiazkaAdresowaObiektowoPP.cbp
+KsiazkaAdresowaObiektowoPP.cscope_file_list
+KsiazkaAdresowaObiektowoPP.depend
+KsiazkaAdresowaObiektowoPP.layout
 ks-strukt.cpp
 UmletPlan.uxf
 gitignore
@@ -6,3 +9,4 @@ bin/
 obj/
 Uzytkownicy.txt
 Adresaci.txt
+Adresaci - Copy.txt

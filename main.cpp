@@ -11,8 +11,9 @@ int main()
 {
     int idZalogowanegoUzytkownika = 0;
     int idOstatniegoAdresata = 0;
+    int idUsunietegoAdresata = 0;
 
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt", "Adresaci-plik_tymczasowy");
 
     while (true)
     {
@@ -59,11 +60,11 @@ int main()
               case '4':
                   ksiazkaAdresowa.wyswietlWszystkichAdresatowZalogowanegoUzytkownika();
                   break;
-            /*  case '5':
-                  idUsunietegoAdresata = usunAdresata(adresaci);
-                  idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+              case '5':
+                  idUsunietegoAdresata = ksiazkaAdresowa.usunAdresata();
+                  idOstatniegoAdresata = ksiazkaAdresowa.podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
                   break;
-              case '6':
+           /*   case '6':
                   edytujAdresata(adresaci);
                   break; */
             case '7':

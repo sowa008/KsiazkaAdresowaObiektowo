@@ -23,8 +23,8 @@ class AdresatManager
     Adresat podajDaneNowegoAdresata();
 
 public:
-    AdresatManager(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
-    : plikZAdresatami(nazwaPlikuZAdresatami),
+    AdresatManager(string nazwaPlikuZAdresatami, string nazwaTymczasowegoPlikuZAdresatami, int idZalogowanegoUzytkownika)
+    : plikZAdresatami(nazwaPlikuZAdresatami, nazwaTymczasowegoPlikuZAdresatami),
       ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
     {
     adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
@@ -36,6 +36,11 @@ public:
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
+    int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
+    int wczytajLiczbeCalkowita();
+    int podajIdWybranegoAdresata();
+    int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata, int idOstatniegoAdresata);
+    int usunAdresata();
 
 };
 
