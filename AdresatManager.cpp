@@ -189,10 +189,9 @@ int AdresatManager :: podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int 
         return idOstatniegoAdresata;
 }
 
-int AdresatManager :: usunAdresata()
+void AdresatManager :: usunAdresata()
 {
     int idUsuwanegoAdresata = 0;
-    int numerLiniiUsuwanegoAdresata = 0;
 
     system("cls");
     cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
@@ -210,18 +209,17 @@ int AdresatManager :: usunAdresata()
             znak = MetodyPomocnicze :: wczytajZnak();
             if (znak == 't')
             {
-                numerLiniiUsuwanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idUsuwanegoAdresata);
-                plikZAdresatami.usunWybranaLinieWPliku(numerLiniiUsuwanegoAdresata);
+                plikZAdresatami.przepiszPlikUsuwajacAdresata(idUsuwanegoAdresata, ID_ZALOGOWANEGO_UZYTKOWNIKA);
                 adresaci.erase(itr);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
-                return idUsuwanegoAdresata;
+                break;
             }
             else
             {
                 cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
                 system("pause");
-                return 0;
+                break;
             }
         }
     }
@@ -230,5 +228,4 @@ int AdresatManager :: usunAdresata()
         cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
         system("pause");
     }
-    return 0;
 }

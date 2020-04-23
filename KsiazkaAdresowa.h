@@ -28,7 +28,7 @@ public:
     }
 
     void dodajAdresata();
-    int usunAdresata();
+    void usunAdresata();
     void rejestracjaUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
     int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata, int idOstatniegoAdresata);

@@ -43,9 +43,9 @@ void KsiazkaAdresowa :: zmianaHaslaZalogowanegoUzytkownika()
     uzytkownikManager.zmianaHaslaZalogowanegoUzytkownika();
 }
 
-int KsiazkaAdresowa :: usunAdresata()
+void KsiazkaAdresowa :: usunAdresata()
 {
-    return adresatManager->usunAdresata();
+    adresatManager->usunAdresata();
 }
 
 int KsiazkaAdresowa :: podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata, int idOstatniegoAdresata)

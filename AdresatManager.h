@@ -31,6 +31,7 @@ public:
     }
 
     void dodajAdresata();
+    void usunAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
     void wyswietlWszystkichAdresatowZalogowanegoUzytkownika();
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
@@ -40,8 +41,6 @@ public:
     int wczytajLiczbeCalkowita();
     int podajIdWybranegoAdresata();
     int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata, int idOstatniegoAdresata);
-    int usunAdresata();
-
 };
 
 #endif
