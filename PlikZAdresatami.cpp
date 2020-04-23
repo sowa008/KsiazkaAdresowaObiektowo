@@ -228,7 +228,6 @@ void PlikZAdresatami :: zmienNazwePliku(string staraNazwa, string nowaNazwa)
 
 void PlikZAdresatami :: przepiszPlikUsuwajacAdresata(int idUsuwanegoAdresata, int idUzytkownika)
 {
-    vector <Adresat> wektorAdresatowZalogowanegoUzytkownika = wczytajAdresatowZalogowanegoUzytkownikaZPliku(idUzytkownika);
     vector <Adresat> wektorWszystkichAdresatow = wczytajWszystkichAdresatowZPliku();
     vector <Adresat> wektorWynikowy;
 
@@ -240,12 +239,9 @@ void PlikZAdresatami :: przepiszPlikUsuwajacAdresata(int idUsuwanegoAdresata, in
         }
         else
         {
-            for (int j=0; j<wektorAdresatowZalogowanegoUzytkownika.size(); j++)
+            if (wektorWszystkichAdresatow[i].idAdresata != idUsuwanegoAdresata)
             {
-                if (wektorAdresatowZalogowanegoUzytkownika[j].idAdresata == wektorWszystkichAdresatow[i].idAdresata)
-                {
-                    wektorWynikowy.push_back(wektorAdresatowZalogowanegoUzytkownika[j]);
-                }
+                wektorWynikowy.push_back(wektorWszystkichAdresatow[i]);
             }
         }
     }
@@ -257,8 +253,6 @@ void PlikZAdresatami :: przepiszPlikUsuwajacAdresata(int idUsuwanegoAdresata, in
     {
         Adresat dane_adresata = wektorWynikowy[i];
 
-            if (dane_adresata.idAdresata != idUsuwanegoAdresata)
-            {
                     tymczasowyPlikTekstowy << dane_adresata.idAdresata << "|";
                     tymczasowyPlikTekstowy << dane_adresata.idZalogowanegoUzytkownika << "|";
                     tymczasowyPlikTekstowy << dane_adresata.imie << "|";
@@ -267,8 +261,8 @@ void PlikZAdresatami :: przepiszPlikUsuwajacAdresata(int idUsuwanegoAdresata, in
                     tymczasowyPlikTekstowy << dane_adresata.email << "|";
                     tymczasowyPlikTekstowy << dane_adresata.adres << "|";
 
-                    if (i<(wektorWynikowy.size()-1)) {tymczasowyPlikTekstowy << endl;}
-            }
+                    if (i == wektorWynikowy.size()-1) { break; }
+                        tymczasowyPlikTekstowy << endl;
     }
         tymczasowyPlikTekstowy.close();
         usunPlik(NAZWA_PLIKU_Z_ADRESATAMI);
