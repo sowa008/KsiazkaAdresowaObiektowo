@@ -48,6 +48,11 @@ void KsiazkaAdresowa :: usunAdresata()
     adresatManager->usunAdresata();
 }
 
+void KsiazkaAdresowa :: edytujAdresata()
+{
+    adresatManager->edytujAdresata();
+}
+
 int KsiazkaAdresowa :: podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata, int idOstatniegoAdresata)
 {
     return adresatManager->podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsuwanegoAdresata, idOstatniegoAdresata);

@@ -38,7 +38,7 @@ public:
     void usunPlik(string nazwaPlikuZRozszerzeniem);
     void usunWybranaLinieWPliku(int numerUsuwanejLinii);
     void przepiszPlikUsuwajacAdresata(int idUsuwanegoAdresata, int idZalogowanegoUzytkownika);
-
+    void przepiszPlikZmieniajacDaneAdresata(int idEdytowanegoAdresata, int idZalogowanegoUzytkownika, char wybor, string daneDoZmiany);
 };
 
 #endif

@@ -41,6 +41,8 @@ public:
     void wyswietlWszystkichAdresatowZalogowanegoUzytkownika();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
+    void edytujAdresata();
+
 };
 
 #endif

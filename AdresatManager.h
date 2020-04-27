@@ -41,6 +41,8 @@ public:
     int wczytajLiczbeCalkowita();
     int podajIdWybranegoAdresata();
     int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata, int idOstatniegoAdresata);
+    void edytujAdresata();
+    char wybierzOpcjeZMenuEdycja();
 };
 
 #endif

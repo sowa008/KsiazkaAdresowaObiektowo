@@ -267,5 +267,73 @@ void PlikZAdresatami :: przepiszPlikUsuwajacAdresata(int idUsuwanegoAdresata, in
         tymczasowyPlikTekstowy.close();
         usunPlik(NAZWA_PLIKU_Z_ADRESATAMI);
         zmienNazwePliku(NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI, NAZWA_PLIKU_Z_ADRESATAMI);
+}
 
+void PlikZAdresatami :: przepiszPlikZmieniajacDaneAdresata(int idEdytowanegoAdresata, int idUzytkownika, char wybor, string daneDoZmiany)
+{
+    vector <Adresat> wektorWszystkichAdresatow = wczytajWszystkichAdresatowZPliku();
+    vector <Adresat> wektorWynikowy;
+
+    for (int i=0; i<wektorWszystkichAdresatow.size(); i++)
+    {
+        if (wektorWszystkichAdresatow[i].idZalogowanegoUzytkownika != idUzytkownika)
+        {
+            wektorWynikowy.push_back(wektorWszystkichAdresatow[i]);
+        }
+        else
+        {
+            if (wektorWszystkichAdresatow[i].idAdresata != idEdytowanegoAdresata)
+            {
+                wektorWynikowy.push_back(wektorWszystkichAdresatow[i]);
+            }
+            else
+            {
+
+                    if (wybor == '1')
+                        {
+                        wektorWszystkichAdresatow[i].imie=daneDoZmiany;
+                        }
+                        else if  (wybor == '2')
+                        {
+                        wektorWszystkichAdresatow[i].nazwisko=daneDoZmiany;
+                        }
+                        else if (wybor == '3')
+                        {
+                        wektorWszystkichAdresatow[i].numerTelefonu=daneDoZmiany;
+                        }
+                        else if (wybor == '4')
+                        {
+                        wektorWszystkichAdresatow[i].email=daneDoZmiany;
+                        }
+                        else if (wybor == '5')
+                        {
+                        wektorWszystkichAdresatow[i].adres=daneDoZmiany;
+                        }
+            wektorWynikowy.push_back(wektorWszystkichAdresatow[i]);
+
+            }
+        }
+    }
+
+    fstream tymczasowyPlikTekstowy;
+    tymczasowyPlikTekstowy.open(NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI.c_str(), ios::out);
+
+    for (int i=0; i<wektorWynikowy.size(); i++)
+    {
+        Adresat dane_adresata = wektorWynikowy[i];
+
+                    tymczasowyPlikTekstowy << dane_adresata.idAdresata << "|";
+                    tymczasowyPlikTekstowy << dane_adresata.idZalogowanegoUzytkownika << "|";
+                    tymczasowyPlikTekstowy << dane_adresata.imie << "|";
+                    tymczasowyPlikTekstowy << dane_adresata.nazwisko << "|";
+                    tymczasowyPlikTekstowy << dane_adresata.numerTelefonu << "|";
+                    tymczasowyPlikTekstowy << dane_adresata.email << "|";
+                    tymczasowyPlikTekstowy << dane_adresata.adres << "|";
+
+                    if (i == wektorWynikowy.size()-1) { break; }
+                        tymczasowyPlikTekstowy << endl;
+    }
+        tymczasowyPlikTekstowy.close();
+        usunPlik(NAZWA_PLIKU_Z_ADRESATAMI);
+        zmienNazwePliku(NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI, NAZWA_PLIKU_Z_ADRESATAMI);
 }
