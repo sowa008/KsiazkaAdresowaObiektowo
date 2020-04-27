@@ -4,21 +4,24 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>490</x>
+      <x>510</x>
       <y>0</y>
       <w>440</w>
-      <h>270</h>
+      <h>320</h>
     </coordinates>
     <panel_attributes>Ksiazka Adresowa
 --
 -NAZWA_PLIKU_Z_UZYTKOWNIKAMI
+-NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI
 -uzytkownikManager : UzytkownikManager 
 - *adresatManager : AdresatManager
 -metodaPomocnicza : MetodyPomocnicze
 --
 +dodajAdresata() : void
++usunAdresata() : void
 +rejestracjaUzytkownika() : void
 +pobierzIdZalogowanegoUzytkownika() : int
++podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata, int idOstatniegoAdresata) : int
 +wypiszWszystkichUzytkownikow() : void
 +wybierzOpcjeZMenuGlownego() : char
 +logowanieUzytkownika() : void
@@ -26,15 +29,16 @@
 +wybierzOpcjeZMenuUzytkownika() : char
 +zmianaHaslaZalogowanegoUzytkownika() : void
 +wyswietlWszystkichAdresatowZalogowanegoUzytkownika() : void
-
-</panel_attributes>
++wyszukajAdresatowPoImieniu() : void
++wyszukajAdresatowPoNazwisku() : void
++edytujAdresata() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
-      <y>740</y>
+      <x>460</x>
+      <y>1060</y>
       <w>250</w>
       <h>190</h>
     </coordinates>
@@ -55,14 +59,14 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>280</y>
+      <x>360</x>
+      <y>330</y>
       <w>350</w>
       <h>250</h>
     </coordinates>
     <panel_attributes>UzytkownikManager
 --
--idZalogowanegoUzytkownika : integer
+-idZalogowanegoUzytkownika : int
 -uzytkownicy : vector &lt;Uzytkownik&gt;
 -plikZUzytkownikami : PlikZUzytkownikami
 --
@@ -81,8 +85,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>550</y>
+      <x>20</x>
+      <y>700</y>
       <w>690</w>
       <h>170</h>
     </coordinates>
@@ -90,7 +94,6 @@
 --
 -NAZWA_PLIKU_Z_UZYTKOWNIKAMI : string
 --
--czyPlikJestPusty() : bool
 -zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik) : string    
 -pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami) : Uzytkownik
 +dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) : void 
@@ -101,24 +104,26 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1150</x>
+      <x>1050</x>
       <y>0</y>
-      <w>310</w>
-      <h>110</h>
+      <w>500</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 --
++czyPlikJestPusty(fstream &amp;plikTekstowy) : static bool
 +konwersjaStringNaInt(string tekst) : static int
 +konwersjaIntNaString(int liczba) : static string
 +wczytajZnak() : static char
-+wczytajLinie() : static string</panel_attributes>
++wczytajLinie() : static string
++zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst) : static string</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>710</x>
-      <y>700</y>
+      <x>730</x>
+      <y>1060</y>
       <w>530</w>
       <h>380</h>
     </coordinates>
@@ -151,10 +156,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>710</x>
-      <y>280</y>
-      <w>440</w>
-      <h>160</h>
+      <x>730</x>
+      <y>330</y>
+      <w>770</w>
+      <h>350</h>
     </coordinates>
     <panel_attributes>AdresatManager
 --
@@ -164,24 +169,34 @@
 --
 -podajDaneNowegoAdresata() : Adresat
 +dodajAdresata() : void
++usunAdresata() : void
 +wyswietlDaneAdresata(Adresat adresat) : void
-+wyswietlWszystkichAdresatowZalogowanegoUzytkownika() : void</panel_attributes>
++wyswietlWszystkichAdresatowZalogowanegoUzytkownika() : void
++wyswietlIloscWyszukanychAdresatow(int iloscAdresatow) : void
++wyszukajAdresatowPoImieniu() : void
++wyszukajAdresatowPoNazwisku() : void
++zwrocNumerLiniiSzukanegoAdresata(int idAdresata) : int
++wczytajLiczbeCalkowita() : int 
++podajIdWybranegoAdresata() : int
++podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata, int idOstatniegoAdresata) : int
++edytujAdresata() : void
++wybierzOpcjeZMenuEdycja() : char</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>710</x>
-      <y>460</y>
-      <w>840</w>
-      <h>220</h>
+      <x>730</x>
+      <y>700</y>
+      <w>930</w>
+      <h>330</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
 -NAZWA_PLIKU_Z_ADRESATAMI : string
+-NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI : string
 -idOstatniegoAdresata : int
 --
--czyPlikJestPusty(fstream &amp;plikTekstowy) : bool
 -zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat) : string
 -pobierzLiczbe(string tekst, int pozycjaZnaku) : string
 -pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami) : Adresat
@@ -189,7 +204,14 @@
 -pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami) : int
 +dopiszAdresataDoPliku(Adresat adresat) : bool
 +wczytajAdresatowZalogowanegoUzytkownikaZPliku(int ID_ZALOGOWANEGO_UZYTKOWNIKA) : vector&lt;Adresat&gt; 
-+pobierzIdOstatniegoAdresata(int ID_ZALOGOWANEGO_UZYTKOWNIKA) : int</panel_attributes>
++wczytajWszystkichAdresatowZPliku() : vector&lt;Adresat&gt;
++pobierzIdOstatniegoAdresata(int ID_ZALOGOWANEGO_UZYTKOWNIKA) : int
++zwrocNumerLiniiSzukanegoAdresata(int idAdresata) : int
++zmienNazwePliku(string staraNazwa, string nowaNazwa) : void
++usunPlik(string nazwaPlikuZRozszerzeniem) : void
++usunWybranaLinieWPliku(int numerUsuwanejLinii) : void
++przepiszPlikUsuwajacAdresata(int idUsuwanegoAdresata, int idZalogowanegoUzytkownika) : void
++przepiszPlikZmieniajacDaneAdresata(int idEdytowanegoAdresata, int idZalogowanegoUzytkownika, char wybor, string daneDoZmiany) : void</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

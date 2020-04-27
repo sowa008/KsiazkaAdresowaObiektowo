@@ -104,7 +104,7 @@ void  AdresatManager :: wyszukajAdresatowPoImieniu()
 
         cout << "Wyszukaj adresatow o imieniu: ";
         imiePoszukiwanegoAdresata = MetodyPomocnicze::wczytajLinie();
-        //imiePoszukiwanegoAdresata = zamienPierwszaLitereNaDuzaAPozostaleNaMale(imiePoszukiwanegoAdresata);
+        imiePoszukiwanegoAdresata = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(imiePoszukiwanegoAdresata);
 
         for (vector <Adresat>::iterator  itr = adresaci.begin(); itr != adresaci.end(); itr++)
         {
@@ -136,7 +136,7 @@ void AdresatManager :: wyszukajAdresatowPoNazwisku()
 
         cout << "Wyszukaj adresatow o nazwisku: ";
         nazwiskoPoszukiwanegoAdresata = MetodyPomocnicze::wczytajLinie();
-        //azwiskoPoszukiwanegoAdresata = zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwiskoPoszukiwanegoAdresata);
+        nazwiskoPoszukiwanegoAdresata = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwiskoPoszukiwanegoAdresata);
 
         for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
         {
@@ -274,34 +274,22 @@ void AdresatManager :: edytujAdresata()
             case '1':
                 cout << "Podaj nowe imie: ";
                 daneDoZmiany = MetodyPomocnicze::wczytajLinie();
-                //adresaci[i].imie = wczytajLinie();
-                //adresaci[i].imie = zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresaci[i].imie);
-                //zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
                 break;
             case '2':
                 cout << "Podaj nowe nazwisko: ";
                 daneDoZmiany = MetodyPomocnicze::wczytajLinie();
-                //adresaci[i].nazwisko = wczytajLinie();
-                //adresaci[i].nazwisko = zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresaci[i].nazwisko);
-                //zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
                 break;
             case '3':
                 cout << "Podaj nowy numer telefonu: ";
                 daneDoZmiany = MetodyPomocnicze::wczytajLinie();
-                //adresaci[i].numerTelefonu = wczytajLinie();
-                //zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
                 break;
             case '4':
                 cout << "Podaj nowy email: ";
                 daneDoZmiany = MetodyPomocnicze::wczytajLinie();
-                //adresaci[i].email = wczytajLinie();
-                //zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
                 break;
             case '5':
                 cout << "Podaj nowy adres zamieszkania: ";
                 daneDoZmiany = MetodyPomocnicze::wczytajLinie();
-                //adresaci[i].adres = wczytajLinie();
-                //zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
                 break;
             case '6':
                 cout << endl << "Powrot do menu uzytkownika" << endl << endl;

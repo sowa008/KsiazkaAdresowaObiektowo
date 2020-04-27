@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <algorithm>
 #include "Uzytkownik.h"
 
 using namespace std;
@@ -17,6 +18,7 @@ public:
     static string konwersjaIntNaString(int liczba);
     static char wczytajZnak();
     static string wczytajLinie();
+    static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
 };
 
 #endif
