@@ -311,6 +311,7 @@ void AdresatManager :: edytujAdresata()
                 break;
             }
             plikZAdresatami.przepiszPlikZmieniajacDaneAdresata(idEdytowanegoAdresata, ID_ZALOGOWANEGO_UZYTKOWNIKA, wybor, daneDoZmiany);
+            adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
         }
     }
     if (czyIstniejeAdresat == false)
